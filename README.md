@@ -13,3 +13,6 @@ The basic function of this program is to write a '0' and a '1' to the file at <b
 
 # What's the log.bin file used for then?
 This is used when the watchdog timer fails a check, it will log the time and date in which the failure happened, much like what Windows would do it the case of a Bug Check (BSOD)
+
+# And what about throwOffWD.py?
+This file can be used to throw off the watchdog timer, causing it to throw the violation exception. It's purpose was to test the watchdog violation's mechanism, but you can just run it if you're bored of the timer working correctly and you want to see something interesting happen.
