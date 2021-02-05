@@ -5,6 +5,9 @@ The first thing you will need to do before running this, is you need to create t
 
 Once these files have been created, the program should be good to go!
 
+# Which file do i run?
+You need to run <b>"Launcher.py"</b> to create a session lock check to avoid conflicts of multiple instances. The session lock file does not interfere with the throwOffWD file at all.
+
 # So what is this program exactly?
 This is a rough python representation of what a watchdog timer does/is. A wikipedia article on a watchdog timer can be found <a href="https://en.wikipedia.org/wiki/Watchdog_timer">here</a>
 
