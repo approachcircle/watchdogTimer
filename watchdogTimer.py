@@ -1,4 +1,5 @@
 import traceback, time, os, sys, winsound
+os.system("echo > SESSION.LOCK")
 z = 0
 x = 1
 try:
@@ -33,6 +34,7 @@ try:
                 raise ZeroDivisionError
         else:
             raise ZeroDivisionError
+    os.system("del SESSION.LOCK")
 
 except FileNotFoundError:
     print("TRACEBACK BUGCHECK")
@@ -43,6 +45,7 @@ except FileNotFoundError:
     print()
     traceback.print_exc()
     input("END:")
+    os.system("del SESSION.LOCK")
     sys.exit()
 
 except ZeroDivisionError:
@@ -68,6 +71,7 @@ except ZeroDivisionError:
     countdown(t)
     os.system("cls")
     os.system("python D:/Python/watchdogTimer.py")
+    os.system("del SESSION.LOCK")
     sys.exit()
 
 except Exception:
@@ -83,4 +87,5 @@ except Exception:
     print()
     traceback.print_exc()
     input("END:")
+    os.system("del SESSION.LOCK")
     sys.exit()
