@@ -8,7 +8,7 @@ The empty directory in this repository is still important, an exception will be 
 This is a rough python representation of what a watchdog timer does/is. A wikipedia article on a watchdog timer can be found <a href="https://en.wikipedia.org/wiki/Watchdog_timer">here</a>
 
 # Okay, but how can i tell that this won't harm my PC?
-The basic function of this program is to write a '0' and a '1' to the file at <b>C:/Windows/!watchdogs/1.$WDSTATE$</b> depending on the time. Since this is a github repository, and this is python, you can always just read the code to help on your judgement on whether or not to run the program :)
+The basic function of this program is to write a '0' and a '1' to the file at <b>!watchdogs/1.$WDSTATE$</b> depending on the time. Since this is a github repository, and this is python, you can always just read the code to help on your judgement on whether or not to run the program :)
 
 # What's the log.bin file used for then?
 This is used when the watchdog timer fails a check, it will log the time and date in which the failure happened, much like what Windows would do it the case of a Bug Check (BSOD)
