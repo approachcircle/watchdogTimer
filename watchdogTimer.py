@@ -12,21 +12,21 @@ try:
             time.sleep(1)
 
     while True:
-        f = open("C:/Windows/!watchdogs/1.$WDSTATE$", "r")
+        f = open("!watchdogs/1.$WDSTATE$", "r")
         print("WATCHDOG KICKED")
         print(time.ctime())
         print()
         time.sleep(0.25)
-        f = open("C:/Windows/!watchdogs/1.$WDSTATE$", "w")
+        f = open("!watchdogs/1.$WDSTATE$", "w")
         f.write("1")
         f.close()
-        f = open("C:/Windows/!watchdogs/1.$WDSTATE$", "r")
+        f = open("!watchdogs/1.$WDSTATE$", "r")
         returned = f.read()
         if returned == "1":
-            f = open("C:/Windows/!watchdogs/1.$WDSTATE$", "w")
+            f = open("!watchdogs/1.$WDSTATE$", "w")
             f.write("0")
             f.close()
-            f = open("C:/Windows/!watchdogs/1.$WDSTATE$", "r")
+            f = open("!watchdogs/1.$WDSTATE$", "r")
             returned = f.read()
             if returned == "0":
                 pass
@@ -60,7 +60,7 @@ except ZeroDivisionError:
     time.sleep(0.25)
     winsound.Beep(500,950)
     print("DUMPING CRASH INFO. DO NOT TURN OFF YOUR COMPUTER...")
-    f = open("C:/Windows/!watchdogs/log.bin", "w")
+    f = open("!watchdogs/log.bin", "w")
     f.write("WATCHDOG_VIOLATION AT " + time.ctime())
     f.close()
     time.sleep(2)
@@ -70,7 +70,7 @@ except ZeroDivisionError:
     print("RESTART IN...")
     countdown(t)
     os.system("cls")
-    os.system("python D:/Python/watchdogTimer.py")
+    os.system("python watchdogTimer.py")
     os.system("del SESSION.LOCK")
     sys.exit()
 
