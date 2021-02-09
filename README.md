@@ -1,12 +1,8 @@
-# IMPORTANT
-The first thing you will need to do before running this, is you need to create two files. If these are not created, an exception will be thrown and the program will tell you.<br><br> The required files are:<br>
-<b>C:/Windows/!watchdogs/1.$WDSTATE$</b><br>
-<b>C:/Windows/!watchdogs/log.bin</b>
-
-Once these files have been created, the program should be good to go!
-
 # Which file do i run?
 You need to run <b>"Launcher.py"</b> to create a session lock check to avoid conflicts of multiple instances. The session lock file does not interfere with the throwOffWD file at all.
+
+# What about the directory and what are they used for?
+The empty directory in this repository is still important, an exception will be thrown if it is not cloned alongside the other files. It is used to store the watchdog's state, and is used to log the watchdog failures.
 
 # So what is this program exactly?
 This is a rough python representation of what a watchdog timer does/is. A wikipedia article on a watchdog timer can be found <a href="https://en.wikipedia.org/wiki/Watchdog_timer">here</a>
