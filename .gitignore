@@ -1,3 +1,7 @@
+# files that the program creates anyway, and be left on my computer.
+SESSION.LOCK
+a.dat
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
