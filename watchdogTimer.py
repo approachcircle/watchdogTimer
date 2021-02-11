@@ -1,15 +1,22 @@
-import traceback, time, os, sys, winsound
+import os
+import sys
+import time
+import traceback
+import winsound
+
 os.system("echo > SESSION.LOCK")
 z = 0
 x = 1
 try:
     t = 5
-    wdid = 0
+
+
     def countdown(t):
         while t > z:
             print(t)
             t -= x
             time.sleep(1)
+
 
     while True:
         f = open("!watchdogs/1.$WDSTATE$", "r")
@@ -34,13 +41,12 @@ try:
                 raise ZeroDivisionError
         else:
             raise ZeroDivisionError
-    os.system("del SESSION.LOCK")
 
 except FileNotFoundError:
     print("TRACEBACK BUGCHECK")
-    print("A fatal error occured and the program needs immediate attention.")
+    print("A fatal error occurred and the program needs immediate attention.")
     print("The watchdog state file which is required is missing. (at the path of C:/Windows/!watchdogs/)")
-    winsound.Beep(500,950)
+    winsound.Beep(500, 950)
     input("Press enter to see the stacktrace information:")
     print()
     traceback.print_exc()
@@ -50,15 +56,15 @@ except FileNotFoundError:
 
 except ZeroDivisionError:
     print("TRACEBACK BUGCHECK")
-    print("A fatal error occured and the program needs to restart in order to continue operation.")
+    print("A fatal error occurred and the program needs to restart in order to continue operation.")
     print()
     print("WATCHDOG_VIOLATION")
     print()
-    winsound.Beep(500,950)
+    winsound.Beep(500, 950)
     time.sleep(0.25)
-    winsound.Beep(500,950)
+    winsound.Beep(500, 950)
     time.sleep(0.25)
-    winsound.Beep(500,950)
+    winsound.Beep(500, 950)
     print("DUMPING CRASH INFO. DO NOT TURN OFF YOUR COMPUTER...")
     f = open("!watchdogs/log.bin", "w")
     f.write("WATCHDOG_VIOLATION AT " + time.ctime())
@@ -76,11 +82,11 @@ except ZeroDivisionError:
 
 except Exception:
     print("TRACEBACK BUGCHECK")
-    print("A fatal error occured and the program needs immediate attention.")
+    print("A fatal error occurred and the program needs immediate attention.")
     print("the program cannot identify the problem.")
-    winsound.Beep(500,950)
+    winsound.Beep(500, 950)
     time.sleep(0.25)
-    winsound.Beep(500,950)
+    winsound.Beep(500, 950)
     input("Press enter to see the stacktrace information:")
     print()
     print("Fell back to General Exception SuperClass")
