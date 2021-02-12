@@ -1,3 +1,6 @@
+# OS Compatibility
+At the time of writing this, the program is only designed to run on windows, because of the fact that that it executes commands using the windows shell and syntax, a version for linux could possibly be made in the future however.
+
 # Which file do i run?
 You need to run <b>"Launcher.py"</b> to create a session lock check to avoid conflicts of multiple instances. The session lock file does not interfere with the throwOffWD file at all.
 
