@@ -8,7 +8,7 @@ You need to run <b>"Launcher.py"</b> to create a session lock check to avoid con
 The empty directory in this repository is still important, an exception will be thrown if it is not cloned alongside the other files. It is used to store the watchdog's state, and is used to log the watchdog failures.
 
 # So what is this program exactly?
-This is a rough python representation of what a watchdog timer does/is. A wikipedia article on a watchdog timer can be found <a href="https://en.wikipedia.org/wiki/Watchdog_timer">here</a>
+This is a rough python representation of what a watchdog timer does/is. A wikipedia article on a watchdog timer can be found [here](https://en.wikipedia.org/wiki/Watchdog_timer)
 
 # Okay, but how can i tell that this won't harm my PC?
 The basic function of this program is to write a '0' and a '1' to the file at <b>!watchdogs/1.$WDSTATE$</b> depending on the time. Since this is a github repository, and this is python, you can always just read the code to help on your judgement on whether or not to run the program :)
